@@ -239,7 +239,7 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
         </div>
 
         <!-- L'ANCRAGE -->
-        <div class="formule-card" id="card-ancrage" onclick="selectFormule(this,'70000','L'Ancrage',8,true)">
+        <div class="formule-card" id="card-ancrage" onclick="selectFormule(this,'70000','L’Ancrage',8,true)">
           <div class="formule-badge">Le choix juste</div>
           <div class="formule-nom">L'Ancrage</div>
           <div class="formule-accroche">S'accorder du temps.</div>
@@ -249,7 +249,7 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
           <div class="formule-par-seance">8 750 FCFA / séance &middot; Valable 2 mois</div>
           <button class="formule-detail-btn" onclick="event.stopPropagation();toggleDetail('detail-ancrage',this)">Ce qui est inclus +</button>
           <div id="detail-ancrage" class="formule-detail" style="display:none">
-            <div class="formule-detail-item">✶ 8 séances collectives (45min à 1h)</div>
+            <div class="formule-detail-item">✶ 8 séances collectives (d'une heure)</div>
             <div class="formule-detail-item">✶ Votre espace personnel — le miroir de votre chemin. Séance après séance, vous apprenez à vous lire. Humeur, énergie, cycle, alimentation, mental. Tout ce que votre corps essaie de vous dire, enfin écrit noir sur blanc.</div>
             <div class="formule-detail-item">✶ 1 bilan nutritionnel initial</div>
             <div class="formule-detail-item">✶ -10% sur tous les accompagnements individuels</div>
@@ -267,7 +267,7 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
           <div class="formule-par-seance">7 500 FCFA / séance &middot; Valable 3 mois</div>
           <button class="formule-detail-btn" onclick="event.stopPropagation();toggleDetail('detail-rituel',this)">Ce qui est inclus +</button>
           <div id="detail-rituel" class="formule-detail" style="display:none">
-            <div class="formule-detail-item">✶ 16 séances collectives (45min à 1h)</div>
+            <div class="formule-detail-item">✶ 16 séances collectives (d'une heure)</div>
             <div class="formule-detail-item">✶ Votre espace personnel — le miroir de votre chemin. Séance après séance, vous apprenez à vous lire. Humeur, énergie, cycle, alimentation, mental. Tout ce que votre corps essaie de vous dire, enfin écrit noir sur blanc.</div>
             <div class="formule-detail-item">✶ 1 bilan nutritionnel approfondi</div>
             <div class="formule-detail-item">✶ 1 séance individuelle à domicile offerte <em>(première souscription uniquement)</em></div>
@@ -275,16 +275,8 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
         </div>
 
       </div>
-      <p style="font-size:11px;color:var(--muted);font-style:italic;text-align:center">Code promo ? <span style="color:var(--gold);cursor:pointer" onclick="togglePromo()">Saisir un code →</span></p>
-      <div id="promo-box" style="display:none;margin-top:14px">
-        <div class="form-group">
-          <label class="form-label">Code promotionnel</label>
-          <div style="display:flex;gap:8px">
-            <input class="form-input" id="promo-input" type="text" placeholder="Votre code" style="text-transform:uppercase"/>
-            <button class="btn-gold" style="width:auto;padding:12px 20px;font-size:14px" onclick="checkPromo()">Valider</button>
-          </div>
-          <p id="promo-msg" style="font-size:12px;margin-top:6px;display:none"></p>
-        </div>
+      
+      
       </div>
     </div>
     <div id="step-creneau" style="display:none">
@@ -713,14 +705,14 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
     <h2>Lieu des séances</h2>
     <p>Les séances se déroulent au Rooftop 360 — Home Residence Hotel, Quartier Cadjehoun, Cotonou, Bénin.</p>
     <h2>Nature des prestations</h2>
-    <p>Séances collectives de stretching et sport en petit groupe (10 personnes maximum), d'une durée de 45 minutes à 1 heure. Des sessions individuelles sur mesure peuvent être organisées sur demande à contact@madameananas.com.</p>
+    <p>Séances collectives de stretching et renforcement musculaire en petit groupe (10 personnes maximum), d'une durée de une heure. Des sessions individuelles sur mesure peuvent être organisées sur demande à contact@madameananas.com.</p>
     <h2>Tarifs & Validité</h2>
     <p><strong>La Parenthèse</strong> — 15 000 FCFA · 1 séance · À utiliser lors de la date choisie à la réservation.</p>
     <p><strong>L'Ancrage</strong> — 70 000 FCFA · 8 séances · Validité 2 mois à compter de la première séance.</p>
     <p><strong>Le Rituel</strong> — 120 000 FCFA · 16 séances · Validité 3 mois à compter de la première séance.</p>
     <p style="font-size:11px;color:var(--muted);font-style:italic;margin-top:8px">Tarifs en Francs CFA, toutes taxes comprises. Les séances non utilisées à l'expiration de la validité sont perdues sans remboursement.</p>
     <h2>Paiement</h2>
-    <p>Paiement accepté par Mobile Money MTN ou Moov au +229 01 96 93 84 49 ou en espèces directement sur place. La réservation en espèces est soumise à validation préalable. Aucun remboursement possible après achat.</p>
+    <p>Paiement accepté par Mobile Money MTN au +229 01 96 93 84 49 ou en espèces directement sur place. La réservation en espèces est soumise à validation préalable. Aucun remboursement possible après achat.</p>
     <h2>Annulation</h2>
     <p>Toute annulation doit être effectuée au moins 36 heures avant la séance, via l'espace personnel sur l'application. Passé ce délai, la séance est considérée comme due et décomptée de la carte. En cas d'annulation de notre part, la séance est restituée.</p>
     <h2>Contact & Réclamations</h2>
@@ -1100,10 +1092,12 @@ async function soumettre(){
     const dateAchat=now.toISOString();
     const crLabel=selCreneauId&&CRENEAU_LABELS[selCreneauId]?CRENEAU_LABELS[selCreneauId]:"";
     const ps=await window._get(window._ref(window._db,"clientes/"+key));
+    // Espèces et A_CHOISIR sans validation -> séances à 0 jusqu'à validation admin
+    const seancesInitiales=(selPaiement==="momo"||selFormuleVal==="0")?selFormuleSeances:0;
     if(!ps.exists()){
-      await window._set(window._ref(window._db,"clientes/"+key),{nom,tel,email,seancesRestantes:selFormuleSeances,seancesTotal:selFormuleSeances,formule:selFormuleNom,creneauLabel:crLabel,dateAchat,dateExpiration,dateCreation:dateAchat});
+      await window._set(window._ref(window._db,"clientes/"+key),{nom,tel,email,seancesRestantes:seancesInitiales,seancesTotal:selFormuleSeances,formule:selFormuleNom,creneauLabel:crLabel,dateAchat,dateExpiration,dateCreation:dateAchat});
     } else {
-      await window._update(window._ref(window._db,"clientes/"+key),{seancesRestantes:selFormuleSeances,seancesTotal:selFormuleSeances,formule:selFormuleNom,creneauLabel:crLabel,dateAchat,dateExpiration});
+      await window._update(window._ref(window._db,"clientes/"+key),{seancesRestantes:seancesInitiales,seancesTotal:selFormuleSeances,formule:selFormuleNom,creneauLabel:crLabel,dateAchat,dateExpiration});
     }
     // Notification WhatsApp pour espèces
     if(selPaiement==="especes"){
@@ -1746,7 +1740,7 @@ async function validerResa(id){
   const nb=typeof c.reservees==="number"?c.reservees:Object.keys(c.reservees||{}).length;
   await window._update(window._ref(window._db,"creneaux/"+r.creneau),{reservees:nb+1});
   const key=encodeKey(r.nom);
-  await window._update(window._ref(window._db,"clientes/"+key),{seancesRestantes:r.seancesTotal||r.seancesRestantes,formule:r.formule,creneauLabel:r.creneauLabel});
+  await window._update(window._ref(window._db,"clientes/"+key),{seancesRestantes:r.seancesTotal||1,formule:r.formule,creneauLabel:r.creneauLabel});
   alert("✓ "+r.nom+" — confirmée, place décomptée, séances activées.");
 }
 
