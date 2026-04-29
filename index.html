@@ -292,9 +292,6 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
         <div class="dates-grid" id="dates-container"></div>
       </div>
     </div>
-    <div style="text-align:center;margin:8px 0 16px">
-      <button class="btn-outline" style="font-size:12px;padding:8px 16px;opacity:.8" onclick="choisirDatePlusTard()">Je choisirai mon créneau plus tard →</button>
-    </div>
     <div id="step-paiement" style="display:none">
       <hr class="gold-line"/>
       <div class="section-eye">Étape 3 sur 3</div>
@@ -794,12 +791,7 @@ function toggleDetail(id,btn){
   el.style.display=open?"none":"block";
   btn.textContent=open?"Ce qui est inclus +":"Fermer −";
 }
-function choisirDatePlusTard(){
-  selDate="A_CHOISIR";
-  if(!selCreneauId)selCreneauId="";
-  document.getElementById("step-paiement").style.display="block";
-  setTimeout(()=>document.getElementById("step-paiement").scrollIntoView({behavior:"smooth",block:"start"}),100);
-}
+
 function ouvrirModalCreneau(){
   if(!currentCliente||(currentCliente.seancesRestantes||0)<=0){alert("Aucune séance disponible dans votre carnet.");return;}
   renderModalCreneaux();
@@ -949,7 +941,11 @@ async function soumettre(){
   const tel=document.getElementById("f-tel").value.trim();
   const email=document.getElementById("f-email").value.trim();
   if(!nom||!tel||!selFormuleVal){alert("Merci de remplir votre nom et WhatsApp.");return;}
-  if(!selDate&&selDate!=="A_CHOISIR"){alert("Merci de choisir un créneau, une date, ou de cliquer sur \"Je choisirai mon créneau plus tard\".");return;}
+  if(!selCreneauId||!selDate){alert("Merci de choisir un créneau et une date.");return;}
+  const pwd=document.getElementById("f-pwd")?document.getElementById("f-pwd").value:"";
+  const pwd2=document.getElementById("f-pwd2")?document.getElementById("f-pwd2").value:"";
+  if(pwd.length<6){alert("Votre mot de passe doit contenir au moins 6 caractères.");return;}
+  if(pwd!==pwd2){alert("Les mots de passe ne correspondent pas.");return;}
   if(!selPaiement){alert("Merci de choisir votre mode de règlement.");return;}
   const btn=document.getElementById("submit-btn");
   btn.disabled=true;btn.textContent="Réservation en cours…";
@@ -969,7 +965,7 @@ async function soumettre(){
     const seancesInitiales=(selPaiement==="momo"||selFormuleVal==="0")?selFormuleSeances:0;
     const ps=await window._get(window._ref(window._db,"clientes/"+key));
     if(!ps.exists()){
-      await window._set(window._ref(window._db,"clientes/"+key),{nom,tel,email,seancesRestantes:seancesInitiales,seancesTotal:selFormuleSeances,formule:selFormuleNom,creneauLabel:CRENEAU_LABELS[selCreneauId],dateCreation:new Date().toISOString()});
+      await window._set(window._ref(window._db,"clientes/"+key),{nom,tel,email,pwd:btoa(unescape(encodeURIComponent(pwd))),seancesRestantes:seancesInitiales,seancesTotal:selFormuleSeances,formule:selFormuleNom,creneauLabel:CRENEAU_LABELS[selCreneauId],dateCreation:new Date().toISOString()});
     } else {
       await window._update(window._ref(window._db,"clientes/"+key),{seancesRestantes:seancesInitiales,seancesTotal:selFormuleSeances,formule:selFormuleNom,creneauLabel:CRENEAU_LABELS[selCreneauId]});
     }
