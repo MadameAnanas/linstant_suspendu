@@ -237,7 +237,7 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
           <div class="formule-devise">FCFA</div>
           <div style="margin-top:10px;font-size:11px;color:var(--muted);font-style:italic">1 séance d’une heure</div>
           <div style="margin-top:12px;padding:8px 12px;border:1px solid rgba(201,168,76,.35);border-radius:1px;text-align:center">
-            <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--gold);letter-spacing:.04em">✶ Séance à 15 000 FCFA offerte si suivie de l’achat d’un carnet</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--gold);letter-spacing:.04em">✶ Offerte si suivie de l’achat d’un carnet *</div>
             <div style="font-size:10px;color:var(--muted-light);font-style:italic;margin-top:3px">Mentionnez-le lors de votre règlement</div>
           </div>
         </div>
@@ -253,8 +253,7 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
           <div id="detail-ancrage" class="formule-detail" style="display:none">
             <div class="formule-detail-item">✶ 8 séances collectives d’une heure</div>
             <div class="formule-detail-item">✶ Votre espace personnel — le temps d’apprendre à vous écouter. Humeur, énergie, cycle, alimentation, souplesse. Vous notez, vous suivez, vous commencez à entendre ce que votre corps vous dit.</div>
-            <div class="formule-detail-item">✶ 1 bilan nutritionnel initial</div>
-            <div class="formule-detail-item">✶ -10% sur tous les accompagnements individuels</div>
+            <div class="formule-detail-item">✶ Bilan nutritionnel initial — à programmer en début de carnet<br/><span style="font-size:10px;opacity:.8">· Entretien de 30 minutes<br/>· Préconisations personnalisées</span></div>
           </div>
         </div>
         <div class="formule-card" id="card-rituel" onclick="selectFormule(this,'120000','Le Rituel',16,true)">
@@ -266,10 +265,10 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
           <div class="formule-devise">FCFA</div>
           <div class="formule-par-seance">7 500 FCFA / séance &middot; Valable 3 mois</div>
           <button class="formule-detail-btn" onclick="event.stopPropagation();toggleDetail('detail-rituel',this)">Ce qui est inclus +</button>
-          <div id="detail-rituel" class="formule-detail" style="display:none">
+          <div <div id="detail-rituel" class="formule-detail" style="display:none">
             <div class="formule-detail-item">✶ 16 séances collectives d’une heure</div>
             <div class="formule-detail-item">✶ Votre espace personnel — le temps de ressentir le changement. Humeur, énergie, cycle, alimentation, souplesse. Vous notez, vous suivez, vous observez. Séance après séance, quelque chose se transforme. Votre corps vous parle. Vous apprenez enfin à l’écouter.</div>
-            <div class="formule-detail-item">✶ 1 bilan nutritionnel approfondi</div>
+            <div class="formule-detail-item">✶ Bilan nutritionnel approfondi — à programmer en début de carnet<br/><span style="font-size:10px;opacity:.8">· Entretien de 45 minutes<br/>· Étude de votre journal alimentaire<br/>· Préconisations personnalisées</span></div>
             <div class="formule-detail-item">✶ 1 séance individuelle à domicile offerte <em>(première souscription uniquement)</em></div>
           </div>
         </div>
@@ -642,7 +641,7 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
     <h2>Prestataire</h2>
     <p>Madame Ananas — Experte en nutrition · Coach sportive, mobilité & bien-être. Basée à Cotonou, Bénin. Contact : via WhatsApp au +229 01 51 25 45 16.</p>
     <h2>Nature des prestations</h2>
-    <p>Séances collectives de stretching et renforcement musculaire en petit groupe, sessions individuelles sur mesure. Les séances se déroulent en extérieur, en rooftop, à Cotonou.</p>
+    <p>Séances collectives de stretching et renforcement musculaire en petit groupe, sessions individuelles sur mesure. Les séances se déroulent au Rooftop 360, Home Résidence Hotel, Cotonou.</p>
     <h2>Tarifs</h2>
     <p>La Parenthèse : 15 000 FCFA (1 séance) · L'Ancrage : 70 000 FCFA (8 séances) · Le Rituel : 120 000 FCFA (16 séances). Tarifs en Francs CFA, toutes taxes comprises.</p>
     <h2>Paiement</h2>
@@ -656,7 +655,16 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
 
     <h2>Ponctualité et tenue</h2>
     <p>Les séances débutent à l'heure indiquée. Afin de ne pas perturber le groupe, il est demandé d'arriver quelques minutes avant le début. Chaque participante est invitée à venir avec : un tapis de sport, une serviette, des chaussettes et une tenue dans laquelle elle se sent à l'aise.</p>
-    <h2>Annulation</h2>
+    <h2>Bilans nutritionnels</h2>
+    <p>Le bilan nutritionnel initial (L’Ancrage) et le bilan nutritionnel approfondi (Le Rituel) sont à programmer en début de carnet, selon disponibilités mutuelles. Les informations partagées lors de ces entretiens sont strictement confidentielles et utilisées uniquement dans le cadre de l’accompagnement.</p>
+
+    <h2>Séance individuelle à domicile</h2>
+    <p>La séance individuelle à domicile est offerte lors de la première souscription au Rituel uniquement. Le lieu est défini d’un commun accord. Une annulation doit être signalée au moins 48 heures à l’avance.</p>
+
+    <h2>Espace personnel</h2>
+    <p>Les données renseignées dans l’espace personnel (humeur, énergie, cycle, alimentation, souplesse) sont strictement confidentielles. Elles sont utilisées exclusivement pour personnaliser l’accompagnement et ne sont jamais transmises à des tiers.</p>
+
+        <h2>Annulation</h2>
     <p>Toute annulation doit être effectuée au moins 36 heures avant la séance. Passé ce délai, la séance est considérée comme due et décomptée de la carte. En cas d'annulation de la part de Madame Ananas, la séance est reportée ou remboursée.</p>
     <h2>Données personnelles</h2>
     <p>Les informations collectées lors de l'inscription sont utilisées exclusivement pour personnaliser l'accompagnement et vous contacter. Elles ne sont pas transmises à des tiers. Conformément à la réglementation en vigueur, vous disposez d'un droit d'accès, de modification et de suppression de vos données.</p>
