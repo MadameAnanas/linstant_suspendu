@@ -1288,7 +1288,7 @@ function renderAdminCreneaux(){
   }).join("");
 }
 
-async async function annulerResaAdmin(id,nom,creneau,statut,paiement,seancesTotal,tel){
+async function annulerResaAdmin(id,nom,creneau,statut,paiement,seancesTotal,tel){
   const motif=prompt("Motif d’annulation pour "+nom+" :");
   if(motif===null)return;
   await window._update(window._ref(window._db,"reservations/"+id),{statut:"annulee",motifAnnulation:motif||""});
