@@ -220,7 +220,7 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
   <p style="font-size:11px;color:var(--muted);letter-spacing:.2em;text-transform:uppercase;z-index:1;position:relative;margin-bottom:8px">Nutrition · Corps · Conscience</p>
   <p class="signature-line">Votre corps ne ment jamais. Écoutez-le.</p>
   <div class="landing-btns">
-    <button class="btn-gold" onclick="goTo('screen-resa')">Réserver ma place</button>
+    <button class="btn-gold" onclick="goTo('screen-resa')">Réserver mon instant →</button>
     <button class="btn-outline" onclick="goTo('screen-connexion')">Mon espace</button>
     <button class="btn-outline" style="font-size:12px;padding:10px;opacity:.6" onclick="goTo('screen-cgv')">Mentions légales & CGV</button>
   </div>
@@ -758,13 +758,12 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
 const ADMIN_CODE="ananas",PROMO_CODE="__DISABLED__";
 const CRENEAU_LABELS={mar:"Au crépuscule — Mardi 17h45",mer:"À l'aube — Mercredi 7h45",ven:"Au crépuscule — Vendredi 17h45"};
 const DATES={
-  mar:["Mardi 5 mai","Mardi 12 mai","Mardi 19 mai"],
+  mar:["Mardi 12 mai","Mardi 19 mai"],
   mer:["Mercredi 6 mai","Mercredi 13 mai","Mercredi 20 mai"],
   ven:["Vendredi 8 mai","Vendredi 15 mai","Vendredi 22 mai"]
 };
 // Dates avec timestamps pour calcul 36h
 const DATE_TIMESTAMPS={
-  "Mardi 5 mai":new Date("2026-05-05T17:45:00").getTime(),
   "Mercredi 6 mai":new Date("2026-05-06T07:45:00").getTime(),
   "Vendredi 8 mai":new Date("2026-05-08T17:45:00").getTime(),
   "Mardi 12 mai":new Date("2026-05-12T17:45:00").getTime(),
